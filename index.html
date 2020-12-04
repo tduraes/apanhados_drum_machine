@@ -11,10 +11,35 @@
 
     <title>Drum Machine</title>
     <script>
+
+        //plays sounds
         function play(str){
             var audio = document.getElementById(str);
             audio.play();
         }
+        //plays sounds when key is pressed
+        window.document.onkeyup = function(event) {
+            let keyStroke = event.key;
+            if(keyStroke === "q" || keyStroke === "Q"){
+                play("Q");
+            } else if (keyStroke === "w" || keyStroke === "W"){
+                play("W");
+            } else if (keyStroke === "e" || keyStroke === "E"){
+                play("E");
+            } else if (keyStroke === "a" || keyStroke === "A"){
+                play("A");
+            } else if (keyStroke === "s" || keyStroke === "S"){
+                play("S");
+            } else if (keyStroke === "d" || keyStroke === "D"){
+                play("D");
+            } else if (keyStroke === "z" || keyStroke === "Z"){
+                play("Z");
+            } else if (keyStroke === "x" || keyStroke === "X"){
+                play("X");
+            } else if (keyStroke === "c" || keyStroke === "C"){
+                play("C");
+            }
+            }
     </script>
 
 
