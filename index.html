@@ -14,6 +14,26 @@
 
         //plays sounds
         function play(str){
+            if(str === "q" || str === "Q"){
+                document.getElementById('display').innerText = "O Trabalho está no *aralho";
+            } else if (str === "w" || str === "W"){
+                document.getElementById('display').innerText = "O Bingue Lada está à espera";
+            } else if (str === "e" || str === "E"){
+                document.getElementById('display').innerText = "Eu sei lá se é os chineses";
+            } else if (str === "a" || str === "A"){
+                document.getElementById('display').innerText = "Olhei pra ela e disse";
+            } else if (str === "s" || str === "S"){
+                document.getElementById('display').innerText = "Tenho de abandonar";
+            } else if (str === "d" || str === "D"){
+                document.getElementById('display').innerText = "Eu nasci aqui";
+            } else if (str === "z" || str === "Z"){
+                document.getElementById('display').innerText = "E PÃO E TSSS";
+            } else if (str === "x" || str === "X"){
+                document.getElementById('display').innerText = "E não são muitos";
+            } else if (str === "c" || str === "C"){
+                document.getElementById('display').innerText = "Eles ganham 10, as mulheres fode 20";
+            }
+
             var audio = document.getElementById(str);
             audio.play();
         }
@@ -39,22 +59,24 @@
             } else if (keyStroke === "c" || keyStroke === "C"){
                 play("C");
             }
-            }
+        }
     </script>
 
 
   </head>
   <body>
+
+
     <div class="container"id="drum-machine">
         <h1 class="text-center">Drum Machine</h1>
         
         <div class="card">
-            <div class="card-body text-center">
+            <div class="card-body text-center border rounded py-5">
                 <div id="display">Tuga Sound Memes</div>
             </div>
         </div>
         
-        <div class="container" align="center">
+        <div class="container border rounded py-5" align="center">
             <div class="btn-group btn-group-lg">
                 <button class="drum-pad btn btn-secondary" id="drum-1" onclick="play('Q')">
                     Q
@@ -86,18 +108,18 @@
             </div>
             
             <div class="btn-group btn-group-lg">
-            <button class="drum-pad btn btn-secondary" id="drum-7" onclick="play('Z')">
-                Z
-                <audio src="./sound/paotss.mp3" class="clip" id="Z"></audio>
-            </button>
-            <button class="drum-pad btn btn-secondary" id="drum-8" onclick="play('X')">
-                X
-                <audio src="./sound/bastantes.mp3" class="clip" id="X"></audio>
-            </button>
-            <button class="drum-pad btn btn-secondary" id="drum-9" onclick="play('C')">
-                C
-                <audio src="./sound/ganha.mp3" class="clip" id="C"></audio>
-            </button>
+                <button class="drum-pad btn btn-secondary" id="drum-7" onclick="play('Z')">
+                    Z
+                    <audio src="./sound/paotss.mp3" class="clip" id="Z"></audio>
+                </button>
+                <button class="drum-pad btn btn-secondary" id="drum-8" onclick="play('X')">
+                    X
+                    <audio src="./sound/bastantes.mp3" class="clip" id="X"></audio>
+                </button>
+                <button class="drum-pad btn btn-secondary" id="drum-9" onclick="play('C')">
+                    C
+                    <audio src="./sound/ganha.mp3" class="clip" id="C"></audio>
+                </button>
             </div>
         </div>
        
